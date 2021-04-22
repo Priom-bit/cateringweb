@@ -1,9 +1,131 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Catering Services</title>
-</head>
-<body>
- <p>This is catering services</p>
-</body>
+	<head>
+		<title>Black Fossils</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/animation.css">
+		<link rel="stylesheet" href="css/custom-style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+		<script src="js/global-js-methods.js"></script>
+	</head>
+	<body>
+		<div id="mySidenav" class="sidenav">
+			<button type="button" class="close" aria-label="Close" onclick="javascript:closeNav();"><span aria-hidden="true">&times;</span></button>
+		  	<a href="#">About us</a>
+		  	<a href="#">Services</a>
+		  	<a href="#">Clients</a>
+		  	<a href="#">Contact</a>
+		</div>
+
+		<div class="container" id="main">
+			<div id="navBarId">
+				<nav class="navbar bg-dark navbar-dark fixed-top">
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" onclick="javascript:openNav();">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="justify-content-center"><span style="color: white;">Black Fossils</span></div>
+				  	<div>
+				  		<a class="navbar-brand" href="#">Games</a>
+				  		<a class="navbar-brand" href="#">Apps</a>
+					</div>
+				</nav>
+			</div>
+			<div id="introductiondiv" style="width: 100%; height: 100%;">
+				<div id="companylog-div" style="text-align: center; padding-top: 8vh;">
+					<img src="resources/nature.jpg" class="rounded-circle" alt="Cinque Terre" width="25%;" height="25%;"> 
+				</div>
+				<div id="carousel-div" class="divcentered" style="margin-top: 2vh;">
+					<div id="demo" class="carousel slide" data-ride="carousel">
+					  <ul class="carousel-indicators">
+					    <li data-target="#demo" data-slide-to="0" class="active"></li>
+					    <li data-target="#demo" data-slide-to="1"></li>
+					    <li data-target="#demo" data-slide-to="2"></li>
+					  </ul>
+					  <div class="carousel-inner">
+					    <div class="carousel-item active">
+					      <img src="resources/carousel-1.jpeg" class="rounded" alt="Los Angeles" width="1100" height="500">
+					      <div class="carousel-caption">
+					        <h3>Los Angeles</h3>
+					        <p>We had such a great time in LA!</p>
+					      </div>   
+					    </div>
+					    <div class="carousel-item">
+					      <img src="resources/carousel-2.jpeg" class="rounded" alt="Chicago" width="1100" height="500">
+					      <div class="carousel-caption">
+					        <h3>Chicago</h3>
+					        <p>Thank you, Chicago!</p>
+					      </div>   
+					    </div>
+					    <div class="carousel-item">
+					      <img src="resources/carousel-3.jpeg" class="rounded" alt="New York" width="1100" height="500">
+					      <div class="carousel-caption">
+					        <h3>New York</h3>
+					        <p>We love the Big Apple!</p>
+					      </div>   
+					    </div>
+					  </div>
+					  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+					    <span class="carousel-control-prev-icon"></span>
+					  </a>
+					  <a class="carousel-control-next" href="#demo" data-slide="next">
+					    <span class="carousel-control-next-icon"></span>
+					  </a>
+					</div>
+				</div>
+			</div>
+			<div id="aboutusdiv" style="width: 100%; height: 100%; margin-top: 10px;"> 
+				<div id="aboutus-text-div" style="text-align: center;">
+					<h1>Aboud Us</h1>
+				</div>
+			    <div class="d-flex justify-content-center">
+				    <div class="card" style="width:300px;">
+					    <img class="card-img-top" src="resources/CEO.jpg" alt="Card image" style="width:100%">
+					    <div class="card-body">
+					      <h4 class="card-title">Md. Abdur Rahman</h4>
+					      <p class="card-text">He is the CEO of Black Fossils.</p>
+					      <a href="#" class="btn btn-primary">See Profile</a>
+					    </div>
+				 	</div>
+				</div>
+
+				<div class="d-flex justify-content-between">
+				    <div class="card" style="width:300px;">
+					    <img class="card-img-top" src="resources/CTO.jpg" alt="Card image" style="width:100%">
+					    <div class="card-body">
+					      <h4 class="card-title">Al Mamun</h4>
+					      <p class="card-text">He is the CTO of Black Fossils.</p>
+					      <a href="#" class="btn btn-primary">See Profile</a>
+					    </div>
+				 	</div>
+				 	<div class="card" style="width:300px;">
+					    <img class="card-img-top" src="resources/Project-Manager.jpg" alt="Card image" style="width:100%">
+					    <div class="card-body">
+					      <h4 class="card-title">Liton Kashem</h4>
+					      <p class="card-text">He is the Project Manager of Black Fossils.</p>
+					      <a href="#" class="btn btn-primary">See Profile</a>
+					    </div>
+				 	</div>
+				</div>
+			</div>
+			<div id="contactusdiv" style="width: 100%; height: 100%; margin-top: 50px;"> 
+				<div id="contactus-text-div" style="text-align: center;">
+					<h1>Contact Us</h1>
+				</div>
+				<div class="d-flex justify-content-center mb-3">
+				    <div class="card" style="width:300px;">
+					    <div class="card-body">
+					      <p class="card-text"><b>Email: </b>bfossils19@gmail.com</p>
+					      <p class="card-text"><b>Mobile: </b>01922655946</p>
+					    </div>
+				 	</div>
+				</div>
+			</div>
+			<div style="width: 100%; height: 200px; background-color: rgb(46,57,109);" class="divcontent_centered rounded">
+				<h1 class="textcontent_centered" style="color: white;">Thanks 🙃</h1>
+			</div>
+	</body>
 </html>
