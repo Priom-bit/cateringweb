@@ -4,12 +4,17 @@
 	<title>Black Fossils</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+	<script src='https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js'></script>
+	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+	<script src="scripts/AdminPanel.js"></script>
+	<script src="scripts/OrderModel.js"></script>
 	<style type="text/css">
 		.containerDiv {
-		  border: 1px outset grey;
-		  background-color: white;    
-		  text-align: left;
-		  margin-top: 10px;
+			border: 1px outset grey;
+			background-color: white;    
+			text-align: left;
+			margin-top: 10px;
 		}
 		.textP {
 			margin-left: 20px;
@@ -30,32 +35,10 @@
 		<h1>Admin Panel</h1>
 	</div>
 	<script>
-		for (var i = 0; i < 20; i++) {
-			var childDiv = document.createElement("div");
-			childDiv.className = "containerDiv";
-			var childP = document.createElement("p");
-			childP.className = "textP";
-			var node = document.createTextNode("Order " + i);
-			childP.appendChild(node);
-
-			var deleteBtn = document.createElement("BUTTON");
-			deleteBtn.innerHTML = "DELETE";
-			deleteBtn.className = "button";
-			deleteBtn.onclick = function() {
-				deleteButtonClicked();
-			};
-			childDiv.appendChild(deleteBtn);
-
-			childDiv.appendChild(childP);
-
-			var element = document.getElementById("containerid");
-			element.appendChild(childDiv);	
-		}
-
-		function deleteButtonClicked() {
-			console.log("deleteButtonClicked");
-		}
-
+		var adminPanel = new AdminPanel(null, []);
+		adminPanel.initializeFirebase();
+		adminPanel.initFirestore();
+		adminPanel.loadOrdersFromServer();
 	</script> 
-</body>
-</html>
+	</body>
+	</html>
