@@ -53,6 +53,7 @@ class AdminPanel {
       var childP = document.createElement("p");
       childP.className = "textP";
       var node = document.createTextNode("" + (i + 1) + ". " + this.getformatedStringFromOrder(order));
+      //node.innerHTML = "" + (i + 1) + ". " + this.getformatedStringFromOrder(order);
       childP.appendChild(node);
 
       var deleteBtn = document.createElement("BUTTON");
@@ -71,10 +72,11 @@ class AdminPanel {
   }
 
   getformatedStringFromOrder(order) {
-    var formattedStr = "Orderid: " + order.orderid;
-    formattedStr = " " + formattedStr + " products: ";
+    var formattedStr = "Orderid: " + order.orderid + " ";
+    var i = 1;
     order.products.forEach((product) => {
-      formattedStr = formattedStr + " productid: " + product.productid + " count: " + product.count + " ";
+      formattedStr = formattedStr + " product " + i + ": productid: " + product.productid + " count: " + product.count;
+      i = i + 1;
     });
     return formattedStr;
   }

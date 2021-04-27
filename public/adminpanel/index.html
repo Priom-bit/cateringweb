@@ -11,29 +11,35 @@
 	<script src="scripts/OrderModel.js"></script>
 	<style type="text/css">
 		.containerDiv {
+			height: 80px;
 			border: 1px outset grey;
 			background-color: white;    
 			text-align: left;
+			position: relative;
 			margin-top: 10px;
+			padding: 20px;
 		}
 		.textP {
-
-			margin-left: 20px;
-			position: relative;
-			top: -20px;
-				
-
+			margin: 0;
+			margin-right: 150px;
+			position: absolute;
+			top: 50%;
+			-ms-transform: translateY(-50%);
+  			transform: translateY(-50%);
 		}
 		.button {
 			border: 1px inset white;
 			background-color: red;
 			color: white;    
 			text-align: center;
-			margin-left: 1200px;
             width: 120px;
 			height: 40px;
-			position: relative;
-			top: 25px;
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			-ms-transform: translateY(-50%);
+  			transform: translateY(-50%);
 
 		}
 	</style>
