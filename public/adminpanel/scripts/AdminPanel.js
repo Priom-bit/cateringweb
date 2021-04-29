@@ -52,17 +52,15 @@ class AdminPanel {
       childDiv.className = "containerDiv";
       var childP = document.createElement("p");
       childP.className = "textP";
-      var node = document.createTextNode("" + (i + 1) + ". " + this.getformatedStringFromOrder(order));
-      //node.innerHTML = "" + (i + 1) + ". " + this.getformatedStringFromOrder(order);
-      childP.appendChild(node);
+      childP.innerHTML = "" + (i + 1) + ". UserId: " + order.userid + "; Name: " + order.username + "; Email: " + order.useremail + " <br>" + this.getformatedStringFromOrder(order);
 
-      var deleteBtn = document.createElement("BUTTON");
-      deleteBtn.innerHTML = "DELETE";
-      deleteBtn.className = "button";
-      deleteBtn.onclick = function() {
-        deleteButtonClicked();
+      var completeBtn = document.createElement("BUTTON");
+      completeBtn.innerHTML = "COMPLETE";
+      completeBtn.className = "button";
+      completeBtn.onclick = function() {
+        completeButtonClicked();
       };
-      childDiv.appendChild(deleteBtn);
+      childDiv.appendChild(completeBtn);
 
       childDiv.appendChild(childP);
 
@@ -72,16 +70,16 @@ class AdminPanel {
   }
 
   getformatedStringFromOrder(order) {
-    var formattedStr = "Orderid: " + order.orderid + " ";
+    var formattedStr = "Orderid: " + order.orderid + "<br>";
     var i = 1;
     order.products.forEach((product) => {
-      formattedStr = formattedStr + " product " + i + ": productid: " + product.productid + " count: " + product.count;
+      formattedStr = formattedStr + i + ": Productid: " + product.productid + "; Product Name: " + product.productname + "; count: " + product.count + "<br>";
       i = i + 1;
     });
     return formattedStr;
   }
 
-  deleteButtonClicked() {
+  completeButtonClicked() {
     console.log("deleteButtonClicked");
   }
 };
